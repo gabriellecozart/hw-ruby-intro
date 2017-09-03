@@ -34,15 +34,15 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  return "Hello, #{name}"
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  /^[^aeiou\W\d]/i =~ s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  /^[0-1]+00$|^0+$/ =~ s
 end
 
 # Part 3
