@@ -9,11 +9,26 @@ def sum arr
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  total = 0
+  arr.sort!
+  if arr.length == 1
+    total += arr[0]
+  elsif arr.length >= 2 
+    total = arr[arr.length - 1] + arr[arr.length - 2]
+  end
+  total
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  result = false
+  combinations = arr.combination(2).to_a
+  combinations.each { |set| 
+    if set[0] + set[1] == n
+      result = true
+    end
+  }
+  
+  return result
 end
 
 # Part 2
